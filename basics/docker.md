@@ -4,17 +4,19 @@
 
 ### primero para dummys 🥴
 
-A grandes rasgos docker es una forma de virtualizar servicios de forma facil.
+A grandes rasgos docker es una forma de virtualizar servicios de forma fácil.
+
+#### [⬇️vamos al lio⬇️](#go-deeper-🧑🏽‍💻)
 
 ### expliquemos un poco 📝
 
-imaginemos que necesitamos una base de datos por ejemplo mongoDB. Sabemos que mongoDB es una servicio de base de datos que deberiamos instalar en nuestro ordenador, configurar el servicio y por ultimo usarlo de la forma en la que mas nos convenga.
+imaginemos que necesitamos una base de datos por ejemplo mongoDB. Sabemos que mongoDB es una servicio de base de datos que deberíamos instalar en nuestro ordenador, configurar el servicio y por ultimo usarlo de la forma en la que mas nos convenga.
 
-Ahora bien es posible que necesites cambiar de entorno mas de una vez y que tengas que repetir este proceso en mas de una ocasion.
+Ahora bien es posible que necesites cambiar de entorno mas de una vez y que tengas que repetir este proceso en mas de una ocasión.
 
 Y si pudieras tener solo mongo y si pudieras hacerlo independiente del SO.
 
-Esta es la solucion que nos trae docker un ejemplo con mongo
+Esta es la solución que nos trae docker un ejemplo con mongo
 
 ```shell
 docker run --name my-mongo-db -p 27017:27017 -d mongo:5.0
@@ -25,15 +27,17 @@ arriba simplemente estamos indicando que
 2. `run` vamos a lanzar el siguiente contenedor
 3. `--name` el nombre de nuestro contenedor
 4. `-p` mapeamos el puerto del contenedor y por el cual vamos a acceder desde nuestro equipo
+  - el primer dígito indica el puerto de nuestro ordenador y el segundo el puerto que tendrá docker
+
 5. `-d` la imagen que vamos a usar, ademas si continuamos el nombre de la imagen con : indicamos la version de la imagen
 
 Claro que para hacer todo esto debemos instalar docker
 
-# [👉 Go to docker instalation 👉](https://docs.docker.com/get-started/) 
+# [👉 Go to docker instalación 👉](https://docs.docker.com/get-started/)  
 
-## Lo basico 🥺
+## Lo básico 🥺
 
-com viste en el ejemplo de arriba por ***teminal*** solo tenemos que invocar a docker y luego a traves de una serie de banderas realizar la configuracion
+como viste en el ejemplo de arriba por ***terminal*** solo tenemos que invocar a docker y luego a través de una serie de banderas realizar la configuración
 
 veamos un par de comandos de docker
 
@@ -67,9 +71,15 @@ con este comando podemos ver un listado de los contenedores que tenemos actualme
 
 ```shell
 docker ps 
-# este comando nos muestra los contenedores que estan conrriendo
+# este comando nos muestra los contenedores que están corriendo
 
 docker ps -a
-# con la bandera -a nos mostrara todos los contenedores incluyendo los que estan abajo
+# con la bandera -a nos mostrara todos los contenedores incluyendo los que están abajo
 ```
+# Go deeper 🧑🏽‍💻
+
+### [levantar un contenedor](./wakeUp.md)
+### [otros comandos](moreComands.md)
+
+
 
